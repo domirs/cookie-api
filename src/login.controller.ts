@@ -18,7 +18,7 @@ export class LoginController {
     res.cookie('username', 'world', {
       httpOnly: true,
       secure: true,
-      sameSite: true,
+      sameSite: 'none',
       maxAge: 3600000,
     });
     res.send({ success: true });
