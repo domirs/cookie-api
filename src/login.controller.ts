@@ -15,7 +15,11 @@ export class LoginController {
 
   @Post()
   setCookie(@Body() body: { name: string }, @Res() res: Response): void {
-    res.cookie('username', 'world', { httpOnly: true });
+    res.cookie('username', 'world', {
+      httpOnly: true,
+      secure: true,
+      sameSite: true,
+    });
     res.send({ success: true });
   }
 }
