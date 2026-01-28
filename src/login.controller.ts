@@ -18,7 +18,7 @@ export class LoginController {
     res.cookie('username', 'world', {
       // httpOnly: true,
       // secure: true,
-      sameSite: 'none',
+      sameSite: 'lax',
       maxAge: 3600000,
       domain: 'cookie-api-2slo.onrender.com',
     });
