@@ -19,6 +19,7 @@ export class LoginController {
       httpOnly: true,
       sameSite: 'none',
       maxAge: 3600000,
+      domain: 'cookie-api-2slo.onrender.com',
     });
     res.send({ success: true });
   }
