@@ -19,6 +19,7 @@ export class LoginController {
       httpOnly: true,
       secure: true,
       sameSite: true,
+      maxAge: 3600000,
     });
     res.send({ success: true });
   }
