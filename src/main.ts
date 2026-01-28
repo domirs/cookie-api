@@ -5,7 +5,7 @@ import { LoginModule } from './login.module';
 async function bootstrap() {
   const app = await NestFactory.create(LoginModule);
 
-  app.enableCors({ origin: true });
+  app.enableCors({ origin: true, credentials: true });
   app.use(cookieParser('secret'));
 
   await app.listen(process.env.PORT ?? 3000);
