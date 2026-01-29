@@ -16,9 +16,9 @@ export class LoginController {
   @Post()
   setCookie(@Body() body: { name: string }, @Res() res: Response): void {
     res.cookie('username', 'world', {
-      // httpOnly: true,
-      // secure: true,
-      sameSite: 'lax',
+      httpOnly: true,
+      secure: true,
+      sameSite: 'none',
       maxAge: 3600000,
       domain: 'cookie-api-2slo.onrender.com',
     });
